@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
-import { siteMetadata } from '@/config/site';
+import { siteMetadata, siteViewport } from '@/config/site';
 import './globals.css';
 
 const inter = Inter({
@@ -12,6 +12,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = siteMetadata;
+export const viewport = siteViewport;
 
 export default function RootLayout({
   children,

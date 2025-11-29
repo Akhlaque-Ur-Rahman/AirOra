@@ -3,6 +3,7 @@
 import { motion } from 'motion/react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/shared';
+import Link from 'next/link';
 import { ArrowRight, Phone } from 'lucide-react';
 
 export function Hero() {
@@ -51,7 +52,7 @@ export function Hero() {
           animate="visible"
         >
           {/* Badge */}
-          <motion.div variants={itemVariants} className="mb-6">
+          <motion.div variants={itemVariants} className="mb-6 mt-6">
             <Badge variant="outlined" className="bg-[#1CB9F6]/20">
               Leading HVAC Solutions Provider
             </Badge>
@@ -83,17 +84,19 @@ export function Hero() {
             variants={itemVariants}
             className="flex flex-col sm:flex-row gap-4"
           >
-            <Button
-              size="lg"
-              className="bg-[#1CB9F6] hover:bg-[#1CB9F6]/90 text-white group"
-            >
-              Get Free Consultation
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
+            <Link href="/contact">
+              <Button
+                size="lg"
+                className="bg-[#1CB9F6] hover:bg-[#1CB9F6]/90 text-white group"
+              >
+                Get Free Consultation
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </Link>
             <Button
               size="lg"
               variant="outline"
-              className="border-2 border-white text-white hover:bg-white hover:text-[#0B1C3F]"
+              className="border-2 border-white "
             >
               <Phone className="mr-2 w-5 h-5" />
               Call Now

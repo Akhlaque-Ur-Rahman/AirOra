@@ -2,6 +2,7 @@
 
 import { motion } from 'motion/react';
 import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 import { SectionHeader, IconWrapper, CardGrid, Card } from '@/components/shared';
 import { services } from '@/data/services';
 
@@ -55,15 +56,15 @@ export function Services() {
 
                 <p className="text-gray-600 mb-4">{service.description}</p>
 
-                <a
-                  href="#contact"
+                <Link
+                  href="/contact"
                   className="inline-flex items-center text-[#1CB9F6] hover:text-[#0B1C3F] transition-colors group"
                 >
                   Learn More
                   <span className="ml-2 group-hover:translate-x-1 transition-transform">
                     →
                   </span>
-                </a>
+                </Link>
               </Card>
             </motion.div>
           ))}

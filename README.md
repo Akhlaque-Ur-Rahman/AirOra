@@ -141,6 +141,38 @@ AirOra/
 
 ---
 
+## Design System
+
+### Color Palette
+
+| Color | Hex | Usage |
+|-------|-----|-------|
+| **Primary** | `#0B1C3F` | Navy Blue - Headings, Footer, Primary Backgrounds |
+| **Accent** | `#1CB9F6` | Cyan - Buttons, Icons, Highlights, Links |
+| **Background** | `#FFFFFF` | Main Background |
+| **Surface** | `#F9FAFB` | Gray-50 - Section Backgrounds |
+| **Text** | `#4B5563` | Gray-600 - Body Text |
+
+### Typography
+
+- **Font Family**: Inter (Google Fonts)
+- **Headings**: Bold (700), Semibold (600)
+- **Body**: Normal (400), Relaxed Line Height (1.625)
+
+### Spacing System
+
+- **Container**: `max-w-7xl` (80rem)
+- **Section Padding**: `py-20` (5rem) to `lg:py-28` (7rem)
+- **Grid Gap**: `gap-8` (2rem)
+- **Element Spacing**: `mb-4`, `mb-6`, `mb-16`
+
+### Shadows & Radius
+
+- **Cards**: `shadow-sm` (default) → `shadow-xl` (hover)
+- **Radius**: `rounded-xl` (cards), `rounded-lg` (buttons/icons), `rounded-full` (badges)
+
+---
+
 ## Customization Guide
 
 ### 1. Branding & Colors

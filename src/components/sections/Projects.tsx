@@ -2,6 +2,7 @@
 
 import { motion } from 'motion/react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { SectionHeader, Badge } from '@/components/shared';
 import { ExternalLink } from 'lucide-react';
@@ -92,13 +93,15 @@ export function Projects() {
           viewport={{ once: true }}
           transition={{ delay: 0.3 }}
         >
-          <Button
-            size="lg"
-            variant="outline"
-            className="border-2 border-[#1CB9F6] text-[#1CB9F6] hover:bg-[#1CB9F6] hover:text-white"
-          >
-            View All Projects
-          </Button>
+          <Link href="/projects">
+            <Button
+              size="lg"
+              variant="outline"
+              className="border-2 border-[#1CB9F6] text-[#1CB9F6] hover:bg-[#1CB9F6] hover:text-white"
+            >
+              View All Projects
+            </Button>
+          </Link>
         </motion.div>
       </div>
     </section>

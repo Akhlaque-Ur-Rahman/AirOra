@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
 import { Menu, Phone } from 'lucide-react';
+import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { navLinks } from '@/config/navigation';
@@ -37,21 +38,21 @@ export function Navbar() {
             whileHover={{ scale: 1.05 }}
             transition={{ type: 'spring', stiffness: 400 }}
           >
-            <a href="#home" className="text-[#0B1C3F] text-2xl font-bold">
-              <span className="text-[#1CB9F6]">APEX</span> HVAC
-            </a>
+            <Link href="/" className="text-[#0B1C3F] text-2xl font-bold">
+              <span className="text-[#1CB9F6]">AirOra</span>
+            </Link>
           </motion.div>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.name}
                 href={link.href}
                 className="text-[#0B1C3F] hover:text-[#1CB9F6] transition-colors duration-300"
               >
                 {link.name}
-              </a>
+              </Link>
             ))}
           </div>
 
@@ -74,14 +75,14 @@ export function Navbar() {
             <SheetContent side="right" className="w-[300px] bg-white">
               <div className="flex flex-col space-y-6 mt-8">
                 {navLinks.map((link) => (
-                  <a
+                  <Link
                     key={link.name}
                     href={link.href}
                     className="text-[#0B1C3F] hover:text-[#1CB9F6] transition-colors"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     {link.name}
-                  </a>
+                  </Link>
                 ))}
                 <div className="pt-4 border-t border-gray-200">
                   <div className="flex items-center space-x-2 text-[#0B1C3F] mb-4">

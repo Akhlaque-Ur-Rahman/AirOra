@@ -21,7 +21,7 @@ export function About() {
             {/* Main Image */}
             <div className="relative rounded-2xl overflow-hidden shadow-2xl h-[500px]">
               <Image
-                src="https://images.unsplash.com/photo-1581094794329-cd1096a7a2e8?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                src="/images/placeholder.jpg"
                 alt="Professional team meeting"
                 fill
                 className="object-cover"
@@ -63,7 +63,7 @@ export function About() {
             />
 
             <p className="text-gray-600 mb-6 mt-6">
-              Since 2005, APEX HVAC has been at the forefront of providing
+              Since 2005, AirOra has been at the forefront of providing
               cutting-edge heating, ventilation, and air conditioning solutions.
               Our commitment to excellence and customer satisfaction has made us
               the preferred choice for businesses and homeowners alike.

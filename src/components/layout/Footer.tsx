@@ -11,6 +11,7 @@ import {
   MapPin,
   ArrowUp,
 } from 'lucide-react';
+import Link from 'next/link';
 import { APP_NAME, CONTACT_INFO, SOCIAL_LINKS } from '@/lib/constants';
 
 export function Footer() {
@@ -65,7 +66,7 @@ export function Footer() {
             transition={{ duration: 0.5 }}
           >
             <div className="text-2xl font-bold mb-4">
-              <span className="text-[#1CB9F6]">APEX</span> HVAC
+              <span className="text-[#1CB9F6]">AirOra</span>
             </div>
             <p className="text-white/70 mb-6">
               Your trusted partner for innovative HVAC solutions. Delivering
@@ -116,12 +117,12 @@ export function Footer() {
             <ul className="space-y-2">
               {footerLinks.services.map((link, index) => (
                 <li key={index}>
-                  <a
-                    href="#services"
+                  <Link
+                    href={link === 'Contact' ? '/contact' : link === 'About Us' ? '/about' : link === 'HVAC Installation' ? '/services' : '/services'}
                     className="text-white/70 hover:text-[#1CB9F6] transition-colors"
                   >
                     {link}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -138,12 +139,12 @@ export function Footer() {
             <ul className="space-y-2">
               {footerLinks.company.map((link, index) => (
                 <li key={index}>
-                  <a
-                    href="#about"
+                  <Link
+                    href={link === 'Contact' ? '/contact' : link === 'About Us' ? '/about' : '/about'}
                     className="text-white/70 hover:text-[#1CB9F6] transition-colors"
                   >
                     {link}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -193,7 +194,7 @@ export function Footer() {
         <div className="container mx-auto max-w-7xl px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-white/60 text-sm text-center md:text-left">
-              © 2024 APEX HVAC. All rights reserved. | Designed with excellence.
+              © 2024 AirOra. All rights reserved. | Designed with excellence.
             </p>
 
             {/* Legal Links */}

@@ -1,11 +1,11 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 
 export const siteConfig = {
-    name: 'APEX HVAC',
-    title: 'APEX HVAC - Professional Climate Control Solutions',
+    name: 'AirOra',
+    title: 'AirOra - Professional Climate Control Solutions',
     description:
         'Expert HVAC installation, maintenance, and repair services for commercial, industrial, and residential properties. Delivering comfort and efficiency since 2005.',
-    url: 'https://apexhvac.com',
+    url: 'https://airora.com',
     ogImage: '/og-image.jpg',
     keywords: [
         'HVAC',
@@ -22,6 +22,7 @@ export const siteConfig = {
 };
 
 export const siteMetadata: Metadata = {
+    metadataBase: new URL(siteConfig.url),
     title: siteConfig.title,
     description: siteConfig.description,
     keywords: siteConfig.keywords,
@@ -47,12 +48,13 @@ export const siteMetadata: Metadata = {
         description: siteConfig.description,
         images: [siteConfig.ogImage],
     },
-    viewport: {
-        width: 'device-width',
-        initialScale: 1,
-    },
     robots: {
         index: true,
         follow: true,
     },
+};
+
+export const siteViewport: Viewport = {
+    width: 'device-width',
+    initialScale: 1,
 };
