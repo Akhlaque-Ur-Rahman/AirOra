@@ -6,7 +6,7 @@ import { Badge } from '@/components/shared';
 interface HeroVideoSectionProps {
   title: string;
   subtitle: string;
-  badge?: string;
+  badge?: string | React.ReactNode;
   children?: React.ReactNode;
 }
 
@@ -42,14 +42,18 @@ export function HeroVideoSection({
         >
           {badge && (
             <div className="mb-6 flex justify-center">
-              <Badge variant="outlined" className="bg-[#1CB9F6]/20 text-white border-[#1CB9F6]/50">
-                {badge}
-              </Badge>
+              {typeof badge === 'string' ? (
+                <Badge variant="outlined" className="bg-[#1CB9F6]/20 text-white border-[#1CB9F6]/50">
+                  {badge}
+                </Badge>
+              ) : (
+                badge
+              )}
             </div>
           )}
 
           <h1
-            className="text-white mb-6 text-4xl md:text-5xl lg:text-6xl font-bold"
+            className="text-white mb-6 text-3xl md:text-5xl lg:text-6xl font-bold"
             style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.3)' }}
           >
             {title}

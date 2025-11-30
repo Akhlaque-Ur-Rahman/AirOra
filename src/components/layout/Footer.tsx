@@ -21,28 +21,19 @@ export function Footer() {
 
   const footerLinks = {
     services: [
-      'HVAC Installation',
-      'Maintenance & Repair',
-      'Climate Control',
-      'Refrigeration',
-      'Energy Audits',
-      'System Upgrades',
+      { name: 'All Services', href: '/services' },
+      { name: 'HVAC Installation', href: '/services' },
+      { name: 'Maintenance', href: '/services' },
+      { name: 'Repairs', href: '/services' },
     ],
     company: [
-      'About Us',
-      'Our Team',
-      'Careers',
-      'Certifications',
-      'News & Blog',
-      'Contact',
+      { name: 'About Us', href: '/about' },
+      { name: 'Contact', href: '/contact' },
+      { name: 'Blogs', href: '/blogs' },
     ],
     resources: [
-      'FAQs',
-      'Case Studies',
-      'Energy Saving Tips',
-      'Maintenance Guide',
-      'Product Catalog',
-      'Service Areas',
+      { name: 'FAQs', href: '/faqs' },
+      { name: 'Support', href: '/contact' },
     ],
   };
 
@@ -118,10 +109,10 @@ export function Footer() {
               {footerLinks.services.map((link, index) => (
                 <li key={index}>
                   <Link
-                    href={link === 'Contact' ? '/contact' : link === 'About Us' ? '/about' : link === 'HVAC Installation' ? '/services' : '/services'}
+                    href={link.href}
                     className="text-white/70 hover:text-[#1CB9F6] transition-colors"
                   >
-                    {link}
+                    {link.name}
                   </Link>
                 </li>
               ))}
@@ -140,10 +131,10 @@ export function Footer() {
               {footerLinks.company.map((link, index) => (
                 <li key={index}>
                   <Link
-                    href={link === 'Contact' ? '/contact' : link === 'About Us' ? '/about' : '/about'}
+                    href={link.href}
                     className="text-white/70 hover:text-[#1CB9F6] transition-colors"
                   >
-                    {link}
+                    {link.name}
                   </Link>
                 </li>
               ))}
@@ -161,30 +152,17 @@ export function Footer() {
             <ul className="space-y-2 mb-6">
               {footerLinks.resources.map((link, index) => (
                 <li key={index}>
-                  <a
-                    href="#"
+                  <Link
+                    href={link.href}
                     className="text-white/70 hover:text-[#1CB9F6] transition-colors"
                   >
-                    {link}
-                  </a>
+                    {link.name}
+                  </Link>
                 </li>
               ))}
             </ul>
 
-            {/* Newsletter Signup */}
-            <div className="mt-6">
-              <h5 className="text-white mb-2">Newsletter</h5>
-              <div className="flex gap-2">
-                <input
-                  type="email"
-                  placeholder="Your email"
-                  className="flex-1 px-3 py-2 rounded bg-white/10 border border-white/20 text-white placeholder:text-white/50 focus:outline-none focus:border-[#1CB9F6]"
-                />
-                <button className="px-4 py-2 bg-[#1CB9F6] hover:bg-[#1CB9F6]/80 rounded transition-colors">
-                  <Mail className="w-5 h-5" />
-                </button>
-              </div>
-            </div>
+
           </motion.div>
         </div>
       </div>

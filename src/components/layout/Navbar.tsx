@@ -8,6 +8,7 @@ import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { navLinks } from '@/config/navigation';
 import { CONTACT_INFO, APP_NAME } from '@/lib/constants';
+import { NavLink } from '@/components/ui/NavLink';
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -46,13 +47,9 @@ export function Navbar() {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
             {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                href={link.href}
-                className="text-[#0B1C3F] hover:text-[#1CB9F6] transition-colors duration-300"
-              >
+              <NavLink key={link.name} href={link.href}>
                 {link.name}
-              </Link>
+              </NavLink>
             ))}
           </div>
 
@@ -62,9 +59,15 @@ export function Navbar() {
               <Phone className="w-4 h-4" />
               <span>{CONTACT_INFO.phone}</span>
             </div>
-            <Button className="bg-[#1CB9F6] hover:bg-[#0B1C3F] text-white">
-              Get Quote
-            </Button>
+            <a
+              href="https://wa.me/917091634233?text=Hello%20AirOra%20team%2C%20I%20would%20like%20to%20inquire%20about%20your%20HVAC%20services%20and%20request%20a%20quote."
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button className="bg-[#1CB9F6] hover:bg-[#0B1C3F] text-white">
+                Get Quote
+              </Button>
+            </a>
           </div>
 
           {/* Mobile Menu Toggle */}
@@ -72,26 +75,33 @@ export function Navbar() {
             <SheetTrigger className="lg:hidden inline-flex items-center justify-center rounded-md p-2 hover:bg-gray-100 transition-colors">
               <Menu className="h-6 w-6 text-[#0B1C3F]" />
             </SheetTrigger>
-            <SheetContent side="right" className="w-[300px] bg-white">
-              <div className="flex flex-col space-y-6 mt-8">
+            <SheetContent side="right" className="w-full sm:w-[300px] bg-white">
+              <div className="flex flex-col space-y-6 mt-6">
                 {navLinks.map((link) => (
-                  <Link
+                  <NavLink
                     key={link.name}
                     href={link.href}
-                    className="text-[#0B1C3F] hover:text-[#1CB9F6] transition-colors"
                     onClick={() => setMobileMenuOpen(false)}
+                    className="text-lg"
                   >
                     {link.name}
-                  </Link>
+                  </NavLink>
                 ))}
                 <div className="pt-4 border-t border-gray-200">
                   <div className="flex items-center space-x-2 text-[#0B1C3F] mb-4">
                     <Phone className="w-4 h-4" />
                     <span>{CONTACT_INFO.phone}</span>
                   </div>
-                  <Button className="w-full bg-[#1CB9F6] hover:bg-[#0B1C3F] text-white">
-                    Get Quote
-                  </Button>
+                  <a
+                    href="https://wa.me/917091634233?text=Hello%20AirOra%20team%2C%20I%20would%20like%20to%20inquire%20about%20your%20HVAC%20services%20and%20request%20a%20quote."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    <Button className="w-full bg-[#1CB9F6] hover:bg-[#0B1C3F] text-white">
+                      Get Quote
+                    </Button>
+                  </a>
                 </div>
               </div>
             </SheetContent>

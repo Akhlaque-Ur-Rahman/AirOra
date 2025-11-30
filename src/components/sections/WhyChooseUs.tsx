@@ -1,8 +1,9 @@
 'use client';
 
 import { motion } from 'motion/react';
-import { SectionHeader, IconWrapper, CardGrid } from '@/components/shared';
+import { SectionHeader, IconWrapper, CardGrid, IconBadge } from '@/components/shared';
 import { features } from '@/data/features';
+import { CheckCircle } from 'lucide-react';
 
 export function WhyChooseUs() {
   const containerVariants = {
@@ -26,7 +27,7 @@ export function WhyChooseUs() {
     <section className="py-20 lg:py-28 bg-white">
       <div className="container mx-auto max-w-7xl px-6 lg:px-8">
         <SectionHeader
-          badge="Why Choose Us"
+          badge={<IconBadge icon={<CheckCircle />} label="Why Choose Us" />}
           heading="Your Trusted HVAC Partner"
           description="We combine technical expertise with exceptional customer service to deliver HVAC solutions that exceed expectations."
         />

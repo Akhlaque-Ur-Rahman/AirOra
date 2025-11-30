@@ -4,7 +4,14 @@ import { motion } from 'motion/react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { SectionHeader, ContactInfo } from '@/components/shared';
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select';
+import { SectionHeader, ContactInfo, IconBadge } from '@/components/shared';
 import { MapPin, Phone, Mail, Clock } from 'lucide-react';
 import { CONTACT_INFO } from '@/lib/constants';
 
@@ -41,7 +48,7 @@ export function ContactForm() {
     <section id="contact" className="py-20 lg:py-28 bg-white">
       <div className="container mx-auto max-w-7xl px-6 lg:px-8">
         <SectionHeader
-          badge="Get In Touch"
+          badge={<IconBadge icon={<Phone />} label="Get In Touch" />}
           heading="Request a Free Consultation"
           description="Have a project in mind? Contact us today to discuss your HVAC needs and get a customized solution."
         />
@@ -83,23 +90,43 @@ export function ContactForm() {
             </div>
 
             {/* Map Placeholder */}
-            <motion.div
-              className="relative h-64 bg-gray-200 rounded-xl overflow-hidden"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.4 }}
-            >
-              <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-[#0B1C3F]/80 to-[#1CB9F6]/80">
-                <div className="text-white text-center">
-                  <MapPin className="w-12 h-12 mx-auto mb-2" />
-                  <p>Interactive Map</p>
-                  <p className="text-sm opacity-80">
-                    (Embed Google Maps or similar)
-                  </p>
-                </div>
+            {/* Map Section */}
+            <div className="space-y-4">
+              <h4 className="text-xl font-semibold text-[#0B1C3F]">Our Location</h4>
+              
+              <motion.div
+                className="relative w-full h-[350px] md:h-[450px] rounded-2xl shadow-lg overflow-hidden border border-[#1CB9F6]/30"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+              >
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3679.167054978147!2d85.32227667470215!3d23.373417979045933!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f4e1da5ec6fbab%3A0x88ca7b0bb2745078!2sRoshpa%20Tower%2C%20Mahatma%20Gandhi%20Main%20Rd%2C%20Kanka%2C%20Ranchi%2C%20Jharkhand%20834001!5e0!3m2!1sen!2sin!4v1709916200000!5m2!1sen!2sin"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="AirOra Office Location"
+                />
+              </motion.div>
+
+              <div className="flex justify-center">
+                <a 
+                  href="https://www.google.com/maps/dir/?api=1&destination=Roshpa+Tower,+Ranchi" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  <Button 
+                    className="bg-[#1CB9F6] text-white rounded-xl shadow-md hover:bg-[#1CB9F6]/90"
+                  >
+                    Get Directions
+                  </Button>
+                </a>
               </div>
-            </motion.div>
+            </div>
           </motion.div>
 
           {/* Right Side - Contact Form */}
@@ -128,7 +155,7 @@ export function ContactForm() {
                 <Input
                   id="name"
                   type="text"
-                  placeholder="John Doe"
+                  placeholder="Your Name"
                   required
                   className="w-full"
                 />
@@ -145,7 +172,7 @@ export function ContactForm() {
                 <Input
                   id="email"
                   type="email"
-                  placeholder="john@example.com"
+                  placeholder="name@example.com"
                   required
                   className="w-full"
                 />
@@ -162,7 +189,7 @@ export function ContactForm() {
                 <Input
                   id="phone"
                   type="tel"
-                  placeholder="+1 (555) 123-4567"
+                  placeholder="+91 xxxxxxxxxx"
                   className="w-full"
                 />
               </div>
@@ -175,18 +202,19 @@ export function ContactForm() {
                 >
                   Service Needed
                 </label>
-                <select
-                  id="service"
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#1CB9F6]"
-                >
-                  <option>Select a service</option>
-                  <option>HVAC Installation</option>
-                  <option>Maintenance & Repair</option>
-                  <option>Climate Control</option>
-                  <option>Energy Audit</option>
-                  <option>System Upgrade</option>
-                  <option>Other</option>
-                </select>
+                <Select>
+                  <SelectTrigger className="w-full">
+                    <SelectValue placeholder="Select a service" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="installation">HVAC Installation</SelectItem>
+                    <SelectItem value="maintenance">Maintenance & Repair</SelectItem>
+                    <SelectItem value="climate">Climate Control</SelectItem>
+                    <SelectItem value="audit">Energy Audit</SelectItem>
+                    <SelectItem value="upgrade">System Upgrade</SelectItem>
+                    <SelectItem value="other">Other</SelectItem>
+                  </SelectContent>
+                </Select>
               </div>
 
               {/* Message Textarea */}

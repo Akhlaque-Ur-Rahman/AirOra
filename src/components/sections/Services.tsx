@@ -3,8 +3,9 @@
 import { motion } from 'motion/react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { SectionHeader, IconWrapper, CardGrid, Card } from '@/components/shared';
+import { SectionHeader, IconWrapper, CardGrid, Card, IconBadge } from '@/components/shared';
 import { services } from '@/data/services';
+import { Wrench } from 'lucide-react';
 
 export function Services() {
   const containerVariants = {
@@ -28,7 +29,7 @@ export function Services() {
     <section id="services" className="py-20 lg:py-28 bg-gray-50">
       <div className="container mx-auto max-w-7xl px-6 lg:px-8">
         <SectionHeader
-          badge="Our Services"
+          badge={<IconBadge icon={<Wrench />} label="Our Services" />}
           heading="Comprehensive HVAC Solutions"
           description="From installation to maintenance, we offer complete HVAC services designed to meet your unique requirements with precision and care."
         />
@@ -71,24 +72,9 @@ export function Services() {
         </motion.div>
 
         {/* CTA Section */}
-        <motion.div
-          className="text-center mt-16"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.3, duration: 0.6 }}
-        >
-          <p className="text-gray-600 mb-6">
-            Need a custom solution? We&apos;re here to help.
-          </p>
-          <Button
-            size="lg"
-            className="bg-[#1CB9F6] hover:bg-[#0B1C3F] text-white"
-          >
-            Request Custom Quote
-          </Button>
-        </motion.div>
+        
       </div>
+      
     </section>
   );
 }

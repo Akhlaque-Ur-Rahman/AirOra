@@ -8,3 +8,4 @@ export { CardGrid } from './CardGrid';
 export { ContactInfo } from './ContactInfo';
 export { CTAGroup } from './CTAGroup';
 export { CheckmarkList } from './CheckmarkList';
+export { IconBadge } from './IconBadge';

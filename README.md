@@ -48,6 +48,10 @@ A modern, professional, and fully responsive HVAC corporate website built with R
 - **Lucide Icons**: Beautiful, consistent icon set
 - **Motion (Framer Motion)**: Advanced animation library
 
+### 🔌 Integrations
+- **WhatsApp**: Global floating chat button and direct integration in Navbar/Mobile menu
+- **Google Maps**: Interactive map embed with custom styling and "Get Directions" functionality
+
 ---
 
 ## Quick Start
@@ -83,23 +87,25 @@ npm run build
 AirOra/
 ├── src/
 │   ├── components/              # React components
-│   │   ├── ui/                 # Reusable UI components (48 Radix-based)
+
+│   │   ├── layout/             # Layout components
+│   │   │   ├── Navbar.tsx      # Navigation bar
+│   │   │   ├── Footer.tsx      # Footer component
+│   │   │   └── HeroVideoSection.tsx # Reusable hero video wrapper
+│   │   ├── sections/           # Page sections
+│   │   │   ├── Hero.tsx        # Hero section
+│   │   │   ├── Services.tsx    # Services grid
+│   │   │   ├── About.tsx       # About section
+│   │   │   ├── ContactForm.tsx # Contact form with Google Maps
+│   │   │   └── ...             # Other sections (Stats, Blogs, etc.)
+│   │   ├── shared/             # Shared utility components
+│   │   │   ├── IconBadge.tsx   # Reusable badge with icon
+│   │   │   ├── SectionHeader.tsx # Standardized section header
+│   │   │   └── ...             # Other shared components
+│   │   ├── ui/                 # Reusable UI components (Radix-based)
 │   │   │   ├── button.tsx      # Button component
-│   │   │   ├── input.tsx       # Input component
-│   │   │   ├── dialog.tsx      # Dialog/Modal component
-│   │   │   ├── carousel.tsx    # Carousel component
-│   │   │   └── ...             # 44+ more UI components
-│   │   ├── figma/              # Image fallback components
-│   │   ├── Hero.tsx            # Hero section with animations
-│   │   ├── Navbar.tsx          # Navigation bar with scroll effects
-│   │   ├── Services.tsx        # Services grid with 6 services
-│   │   ├── WhyChooseUs.tsx     # Benefits section
-│   │   ├── ClientsCarousel.tsx # Infinite scrolling client logos
-│   │   ├── About.tsx           # About section with image
-│   │   ├── Stats.tsx           # Animated statistics
-│   │   ├── Projects.tsx        # Projects/portfolio showcase
-│   │   ├── ContactForm.tsx     # Contact form with info cards
-│   │   └── Footer.tsx          # Multi-column footer
+│   │   │   └── ...             # 48+ UI components
+│   │   └── WhatsAppButton.tsx  # Global floating WhatsApp button
 │   ├── App.tsx                 # Main app component
 │   ├── main.tsx                # Entry point
 │   └── index.css               # Global styles (includes Tailwind)

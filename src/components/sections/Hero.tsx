@@ -2,9 +2,9 @@
 
 import { motion } from 'motion/react';
 import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/shared';
+import { IconBadge } from '@/components/shared';
 import Link from 'next/link';
-import { ArrowRight, Phone } from 'lucide-react';
+import { ArrowRight, Phone, Award } from 'lucide-react';
 
 export function Hero() {
   const containerVariants = {
@@ -28,7 +28,7 @@ export function Hero() {
   };
 
   return (
-    <section id="home" className="relative h-screen min-h-[600px] flex items-center">
+    <section id="home" className="relative h-[100dvh] min-h-[600px] flex items-center pt-20">
       {/* Background Video with Overlay */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <video
@@ -53,15 +53,17 @@ export function Hero() {
         >
           {/* Badge */}
           <motion.div variants={itemVariants} className="mb-6 mt-6">
-            <Badge variant="outlined" className="bg-[#1CB9F6]/20">
-              Leading HVAC Solutions Provider
-            </Badge>
+            <IconBadge 
+              icon={<Award />} 
+              label="Leading HVAC Solutions Provider" 
+              className="bg-[#1CB9F6]/20 border-[#1CB9F6]/40"
+            />
           </motion.div>
 
           {/* Main Heading */}
           <motion.h1
             variants={itemVariants}
-            className="text-white mb-6 text-5xl lg:text-6xl font-bold"
+            className="text-white mb-6 text-4xl lg:text-6xl font-bold"
             style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.3)' }}
           >
             Innovative Climate Control{' '}

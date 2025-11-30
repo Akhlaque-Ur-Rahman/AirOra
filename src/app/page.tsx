@@ -4,7 +4,7 @@ import {
   WhyChooseUs,
   About,
   Stats,
-  Projects,
+  Blogs,
   ContactForm,
 } from '@/components/sections';
 
@@ -16,7 +16,7 @@ export default function HomePage() {
       <WhyChooseUs />
       <About />
       <Stats />
-      <Projects />
+      <Blogs />
       <ContactForm />
     </main>
   );

@@ -2,8 +2,9 @@
 
 import { motion } from 'motion/react';
 import { useEffect, useRef, useState } from 'react';
-import { SectionHeader } from '@/components/shared';
+import { SectionHeader, IconBadge } from '@/components/shared';
 import { stats } from '@/data/stats';
+import { BarChart } from 'lucide-react';
 
 export function Stats() {
   return (
@@ -20,7 +21,7 @@ export function Stats() {
 
       <div className="container mx-auto max-w-7xl px-6 lg:px-8 relative z-10">
         <SectionHeader
-          badge="Our Impact"
+          badge={<IconBadge icon={<BarChart />} label="Our Impact" />}
           heading={<span className="text-white">Numbers That Speak for Themselves</span>}
           description="Our track record demonstrates our commitment to excellence and customer satisfaction."
           className="[&_p]:text-white/80"
@@ -94,7 +95,7 @@ function StatCard({ stat, index }: { stat: any; index: number }) {
       transition={{ delay: index * 0.1, duration: 0.6 }}
     >
       <motion.div
-        className="text-5xl lg:text-6xl font-bold text-[#1CB9F6] mb-2"
+        className="text-4xl lg:text-6xl font-bold text-[#1CB9F6] mb-2"
         initial={{ scale: 0.5 }}
         whileInView={{ scale: 1 }}
         viewport={{ once: true }}

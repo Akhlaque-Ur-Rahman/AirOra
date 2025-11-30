@@ -2,8 +2,9 @@
 
 import { motion } from 'motion/react';
 import Image from 'next/image';
-import { SectionHeader, CheckmarkList, CTAGroup } from '@/components/shared';
+import { SectionHeader, CheckmarkList, CTAGroup, IconBadge } from '@/components/shared';
 import { aboutHighlights } from '@/data/about';
+import { UsersRound } from 'lucide-react';
 
 export function About() {
   return (
@@ -31,7 +32,7 @@ export function About() {
 
             {/* Floating Card */}
             <motion.div
-              className="absolute -bottom-8 -right-8 bg-[#0B1C3F] text-white p-8 rounded-xl shadow-xl"
+              className="absolute bottom-4 right-4 lg:-bottom-8 lg:-right-8 bg-[#0B1C3F] text-white p-8 rounded-xl shadow-xl"
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
@@ -50,7 +51,7 @@ export function About() {
             transition={{ duration: 0.7 }}
           >
             <SectionHeader
-              badge="About Us"
+              badge={<IconBadge icon={<UsersRound />} label="About Us" />}
               heading={
                 <>
                   Leading the Way in{' '}
@@ -82,7 +83,6 @@ export function About() {
             {/* CTA */}
             <CTAGroup
               primaryText="Learn More About Us"
-              secondaryText="View Our Projects"
             />
           </motion.div>
         </div>
