@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
-import { Menu, Phone } from 'lucide-react';
+import { Menu, MessageCircle } from 'lucide-react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
@@ -55,53 +55,72 @@ export function Navbar() {
 
           {/* Contact Info & CTA - Desktop */}
           <div className="hidden lg:flex items-center space-x-4">
-            <div className="flex items-center space-x-2 text-[#0B1C3F]">
-              <Phone className="w-4 h-4" />
-              <span>{CONTACT_INFO.phone}</span>
-            </div>
-            <a
-              href="https://wa.me/917091634233?text=Hello%20AirOra%20team%2C%20I%20would%20like%20to%20inquire%20about%20your%20HVAC%20services%20and%20request%20a%20quote."
+            <Link
+              href="/contact"
+              className="bg-[#1CB9F6] text-white px-4 py-2 rounded-lg shadow-md hover:bg-[#1CB9F6]/90 transition font-medium"
+            >
+              Contact Us
+            </Link>
+            {/* <a
+              href="https://wa.me/918434008450?text=Hello%20AirOra%20team%2C%20I%20would%20like%20to%20inquire%20about%20your%20HVAC%20services%20and%20request%20a%20quote."
               target="_blank"
               rel="noopener noreferrer"
+              className="bg-[#25D366] text-white px-4 py-2 rounded-lg shadow-md hover:bg-[#25D366]/90 transition flex items-center gap-2 font-medium"
             >
-              <Button className="bg-[#1CB9F6] hover:bg-[#0B1C3F] text-white">
-                Get Quote
-              </Button>
-            </a>
+              <MessageCircle className="w-5 h-5" />
+              Chat
+            </a> */}
           </div>
 
           {/* Mobile Menu Toggle */}
           <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
-            <SheetTrigger className="lg:hidden inline-flex items-center justify-center rounded-md p-2 hover:bg-gray-100 transition-colors">
-              <Menu className="h-6 w-6 text-[#0B1C3F]" />
+            <SheetTrigger className="lg:hidden inline-flex items-center justify-center rounded-md p-2 text-[#0B1C3F] hover:bg-gray-100 transition-colors">
+              <Menu className="h-6 w-6" />
             </SheetTrigger>
-            <SheetContent side="right" className="w-full sm:w-[300px] bg-white">
-              <div className="flex flex-col space-y-6 mt-6">
-                {navLinks.map((link) => (
-                  <NavLink
-                    key={link.name}
-                    href={link.href}
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="text-lg"
-                  >
-                    {link.name}
-                  </NavLink>
-                ))}
-                <div className="pt-4 border-t border-gray-200">
-                  <div className="flex items-center space-x-2 text-[#0B1C3F] mb-4">
-                    <Phone className="w-4 h-4" />
-                    <span>{CONTACT_INFO.phone}</span>
+            <SheetContent side="right" className="w-full sm:w-[350px] bg-[#0B1C3F] border-l border-[#1CB9F6]/20 p-0 text-white">
+              <div className="flex flex-col h-full">
+                {/* Drawer Header */}
+                <div className="p-6 border-b border-white/10">
+                  <Link href="/" onClick={() => setMobileMenuOpen(false)} className="text-2xl font-bold text-white">
+                    Air<span className="text-[#1CB9F6]">Ora</span>
+                  </Link>
+                </div>
+
+                {/* Navigation Links */}
+                <div className="flex-1 overflow-y-auto py-6 px-6 flex flex-col space-y-2">
+                  {navLinks.map((link) => (
+                    <NavLink
+                      key={link.name}
+                      href={link.href}
+                      onClick={() => setMobileMenuOpen(false)}
+                      className="text-xl font-medium text-white/90 hover:text-[#1CB9F6] py-3 border-b border-white/5 transition-colors block"
+                    >
+                      {link.name}
+                    </NavLink>
+                  ))}
+                </div>
+
+                {/* Drawer Footer */}
+                <div className="p-6 bg-[#0B1C3F] border-t border-white/10">
+                  <div className="flex flex-col gap-3 w-full">
+                    <Link
+                      href="/contact"
+                      onClick={() => setMobileMenuOpen(false)}
+                      className="w-full bg-[#1CB9F6] text-white px-4 py-3 rounded-xl shadow-md hover:bg-[#1CB9F6]/90 transition text-center font-medium text-lg"
+                    >
+                      Contact Us
+                    </Link>
+                    <a
+                      href="https://wa.me/918434008450?text=Hello%20AirOra%20team%2C%20I%20would%20like%20to%20inquire%20about%20your%20HVAC%20services%20and%20request%20a%20quote."
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={() => setMobileMenuOpen(false)}
+                      className="w-full bg-[#25D366] text-white px-4 py-3 rounded-xl shadow-md hover:bg-[#25D366]/90 transition flex items-center justify-center gap-2 font-medium text-lg"
+                    >
+                      <MessageCircle className="w-5 h-5" />
+                      Chat With Us
+                    </a>
                   </div>
-                  <a
-                    href="https://wa.me/917091634233?text=Hello%20AirOra%20team%2C%20I%20would%20like%20to%20inquire%20about%20your%20HVAC%20services%20and%20request%20a%20quote."
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    <Button className="w-full bg-[#1CB9F6] hover:bg-[#0B1C3F] text-white">
-                      Get Quote
-                    </Button>
-                  </a>
                 </div>
               </div>
             </SheetContent>

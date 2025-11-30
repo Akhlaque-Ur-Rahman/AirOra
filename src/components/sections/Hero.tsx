@@ -28,7 +28,7 @@ export function Hero() {
   };
 
   return (
-    <section id="home" className="relative h-[100dvh] min-h-[600px] flex items-center pt-20">
+    <section id="home" className="relative min-h-[100dvh] flex items-start lg:items-center py-24 lg:pt-20">
       {/* Background Video with Overlay */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <video
@@ -126,22 +126,7 @@ export function Hero() {
         </motion.div>
       </div>
 
-      {/* Scroll Indicator */}
-      <motion.div
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{
-          delay: 1,
-          duration: 0.8,
-          repeat: Infinity,
-          repeatType: 'reverse',
-        }}
-      >
-        <div className="w-6 h-10 border-2 border-white/50 rounded-full flex items-start justify-center p-2">
-          <div className="w-1.5 h-3 bg-[#1CB9F6] rounded-full" />
-        </div>
-      </motion.div>
+
     </section>
   );
 }

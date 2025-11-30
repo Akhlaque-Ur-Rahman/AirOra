@@ -24,7 +24,8 @@ A modern, professional, and fully responsive HVAC corporate website built with R
 ### 🎨 Design & UX
 - **Modern UI/UX**: Premium design with vibrant color palette and glassmorphism effects
 - **Smooth Animations**: Powered by Framer Motion for engaging user experience
-- **Fully Responsive**: Optimized for all devices (mobile, tablet, desktop)
+- **Fully Responsive**: Optimized for all devices with specific mobile enhancements (Hero section, Mobile Drawer)
+- **Enhanced Mobile Menu**: Modern dark-themed drawer with touch-friendly navigation and action buttons
 - **Accessibility**: Built with Radix UI primitives for excellent accessibility
 - **Dark Theme Ready**: Supports theme customization via next-themes
 
@@ -49,7 +50,7 @@ A modern, professional, and fully responsive HVAC corporate website built with R
 - **Motion (Framer Motion)**: Advanced animation library
 
 ### 🔌 Integrations
-- **WhatsApp**: Global floating chat button and direct integration in Navbar/Mobile menu
+- **WhatsApp**: "Chat With Us" buttons in Navbar and Mobile Menu for direct customer engagement
 - **Google Maps**: Interactive map embed with custom styling and "Get Directions" functionality
 
 ---
