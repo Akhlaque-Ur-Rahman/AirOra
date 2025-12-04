@@ -10,7 +10,7 @@ export default function ServicesPage() {
         badge={<IconBadge icon={<Star />} label="Technical Competencies" className="bg-[#1CB9F6]/20 text-white border-[#1CB9F6]/50" />}
         title="End-to-End HVAC Engineering"
         subtitle="Turnkey climate control solutions encompassing design, installation, commissioning, and lifecycle maintenance for complex commercial infrastructures."
-        backgroundImage="https://images.unsplash.com/photo-1581091870627-a6a3d1c3e3c7?auto=format&fit=crop&w=2000&q=80"
+        backgroundImage="/images/services.webp"
       />
 
       <div className="py-12">

@@ -8,7 +8,7 @@ export default function ContactPage() {
         badge="Get in Touch"
         title="Consult Our Engineering Team"
         subtitle="Connect with our HVAC specialists for project consultations, technical audits, and 24/7 emergency support."
-        backgroundImage="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=2000&q=80"
+        backgroundImage="/images/contact.webp"
       />
       <ContactForm />
     </main>

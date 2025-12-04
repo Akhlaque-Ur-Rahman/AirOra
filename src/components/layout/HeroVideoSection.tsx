@@ -27,8 +27,9 @@ export function HeroVideoSection({
           src={backgroundImage || "https://images.unsplash.com/photo-1581090700227-1e37b190418e?auto=format&fit=crop&w=2000&q=80"}
           alt="HVAC Services Background"
           fill
-          className="object-cover"
+          className="object-cover object-center"
           priority
+          sizes="100vw"
         />
         {/* Gradient Overlay - Matching Hero.tsx style but adapted for centered content */}
         <div className="absolute inset-0 bg-gradient-to-b from-[#0B1C3F]/90 via-[#0B1C3F]/80 to-[#0B1C3F]/90" />

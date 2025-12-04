@@ -39,7 +39,7 @@ export default function BlogsPage() {
         badge="Technical Insights"
         title="HVAC Engineering Journal"
         subtitle="Expert analysis, industry trends, and technical guides for optimizing building climate systems."
-        backgroundImage="https://images.unsplash.com/photo-1526741421552-41f0a3551894?auto=format&fit=crop&w=2000&q=80"
+        backgroundImage="/images/blog.webp"
       />
 
       <main className="container mx-auto max-w-7xl py-20 px-6">

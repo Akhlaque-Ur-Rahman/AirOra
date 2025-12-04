@@ -10,7 +10,7 @@ export default function AboutPage() {
         badge={<IconBadge icon={<History />} label="Our Corporate Legacy" className="bg-[#1CB9F6]/20 text-white border-[#1CB9F6]/50" />}
         title="Engineering Comfort Since 2005"
         subtitle="A legacy of technical excellence in delivering advanced HVAC solutions for India’s most demanding commercial and industrial environments."
-        backgroundImage="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=2000&q=80"
+        backgroundImage="/images/about.webp"
       />
 
       <div className="py-12">

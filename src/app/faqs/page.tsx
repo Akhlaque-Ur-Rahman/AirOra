@@ -45,7 +45,7 @@ export default function FAQsPage() {
         badge={<IconBadge icon={<HelpCircle />} label="Technical Support" className="bg-[#1CB9F6]/20 text-white border-[#1CB9F6]/50" />}
         title="Engineering FAQs"
         subtitle="Technical clarifications regarding our operational protocols, maintenance standards, and project execution methodologies."
-        backgroundImage="https://images.unsplash.com/photo-1486304873000-235643847519?auto=format&fit=crop&w=2000&q=80"
+        backgroundImage="/images/faq.webp"
       />
 
       <main className="container mx-auto max-w-7xl py-20 px-6">

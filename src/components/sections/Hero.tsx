@@ -33,11 +33,12 @@ export function Hero() {
       {/* Background Video with Overlay */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <Image
-          src="https://images.unsplash.com/photo-1581090700227-1e37b190418e?auto=format&fit=crop&w=2000&q=80"
+          src="/images/engineering.webp"
           alt="HVAC Industrial Background"
           fill
-          className="object-cover"
+          className="object-cover object-center"
           priority
+          sizes="100vw"
         />
         {/* Dark Overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#0B1C3F]/95 via-[#0B1C3F]/85 to-[#0B1C3F]/70" />
