@@ -17,38 +17,38 @@ export interface Service {
 export const services: Service[] = [
     {
         icon: Wind,
-        title: 'HVAC Installation',
+        title: 'Turnkey HVAC Installation',
         description:
-            'Professional installation of heating, ventilation, and air conditioning systems for commercial and residential properties.',
+            'End-to-end execution of commercial and industrial HVAC projects, ensuring compliance with ASHRAE standards and local building codes.',
     },
     {
         icon: Thermometer,
-        title: 'Climate Control',
+        title: 'Precision Climate Control',
         description:
-            'Advanced climate control solutions tailored to your specific needs, ensuring optimal comfort year-round.',
+            'Advanced environmental control systems for data centers, laboratories, and pharmaceutical facilities requiring strict temperature and humidity regulation.',
     },
     {
         icon: Wrench,
-        title: 'Maintenance & Repair',
+        title: 'Preventive Maintenance Services',
         description:
-            'Regular maintenance and emergency repair services to keep your systems running efficiently at all times.',
+            'Comprehensive AMC packages including vibration analysis, oil analysis, and thermal imaging to ensure uninterrupted system operation.',
     },
     {
         icon: Snowflake,
-        title: 'Refrigeration Systems',
+        title: 'Industrial Refrigeration',
         description:
-            'Industrial and commercial refrigeration solutions for cold storage, food service, and specialized applications.',
+            'Custom-engineered cold chain and process cooling solutions designed for high-efficiency heat rejection and temperature stability.',
     },
     {
         icon: Shield,
-        title: 'Energy Audits',
+        title: 'Energy Efficiency Audits',
         description:
-            'Comprehensive energy assessments to identify savings opportunities and improve system efficiency.',
+            'Detailed analysis of HVAC energy consumption using advanced logging tools to identify ROI-driven retrofit opportunities.',
     },
     {
         icon: Settings,
-        title: 'System Upgrades',
+        title: 'Retrofits & Modernization',
         description:
-            'Modern retrofits and system upgrades to enhance performance and reduce operational costs.',
+            'Upgrading legacy equipment with modern VRF/VRV systems and smart controls to improve part-load efficiency and reduce carbon footprint.',
     },
 ];

@@ -172,25 +172,25 @@ export function Footer() {
         <div className="container mx-auto max-w-7xl px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-white/60 text-sm text-center md:text-left">
-              © 2024 AirOra. All rights reserved. | Designed with excellence.
+              © 2025 AirOra. All rights reserved. | Designed by <a href="https://edunexservices.com" target="_blank" className="text-[#1CB9F6] hover:text-[#1CB9F6]/80 transition-colors">EduNex</a> with ❤️
             </p>
 
             {/* Legal Links */}
             <div className="flex gap-6 text-sm">
               <a
-                href="#"
+                href="https://facebook.com/AirOra"
                 className="text-white/60 hover:text-[#1CB9F6] transition-colors"
               >
                 Privacy Policy
               </a>
               <a
-                href="#"
+                href="https://x.com/AirOra"
                 className="text-white/60 hover:text-[#1CB9F6] transition-colors"
               >
                 Terms of Service
               </a>
               <a
-                href="#"
+                href="https://linkedin.com/company/AirOra"
                 className="text-white/60 hover:text-[#1CB9F6] transition-colors"
               >
                 Cookie Policy

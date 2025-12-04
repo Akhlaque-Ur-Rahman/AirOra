@@ -89,7 +89,7 @@ export function ContactForm() {
               ))}
             </div>
 
-            {/* Map Placeholder */}
+
             {/* Map Section */}
             <div className="space-y-4">
               <h4 className="text-xl font-semibold text-[#0B1C3F]">Our Location</h4>

@@ -2435,6 +2435,10 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
+.hover\:text-\[\#1CB9F6\]\/80:hover {
+  color: rgb(28 185 246 / 0.8);
+}
+
 .hover\:underline:hover {
   text-decoration-line: underline;
 }

@@ -29,9 +29,9 @@ export function Services() {
     <section id="services" className="py-20 lg:py-28 bg-gray-50">
       <div className="container mx-auto max-w-7xl px-6 lg:px-8">
         <SectionHeader
-          badge={<IconBadge icon={<Wrench />} label="Our Services" />}
-          heading="Comprehensive HVAC Solutions"
-          description="From installation to maintenance, we offer complete HVAC services designed to meet your unique requirements with precision and care."
+          badge={<IconBadge icon={<Wrench />} label="Engineering Capabilities" />}
+          heading="End-to-End Commercial HVAC Solutions"
+          description="From load analysis to lifecycle maintenance, we engineer robust HVAC systems that maximize thermal comfort and operational efficiency."
         />
 
         {/* Services Grid */}

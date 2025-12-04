@@ -17,38 +17,38 @@ export interface Feature {
 export const features: Feature[] = [
     {
         icon: Award,
-        title: 'Certified Experts',
+        title: 'Certified Engineering Team',
         description:
-            'Our technicians are fully licensed, certified, and trained in the latest HVAC technologies.',
+            'Our staff includes ISHRAE-certified engineers and technicians proficient in the latest cooling technologies.',
     },
     {
         icon: Clock,
-        title: '24/7 Emergency Service',
+        title: '24/7 Rapid Response',
         description:
-            'Round-the-clock support for urgent repairs and maintenance needs.',
+            'Critical support infrastructure ensuring minimal downtime for mission-critical industrial cooling systems.',
     },
     {
         icon: Users,
-        title: 'Experienced Team',
+        title: 'Decades of Expertise',
         description:
-            'Over 18 years of industry experience with hundreds of successful projects.',
+            'Over 18 years of specialized experience in handling complex commercial HVAC installations across India.',
     },
     {
         icon: CheckCircle,
-        title: 'Quality Guaranteed',
+        title: 'Performance Assurance',
         description:
-            'We stand behind our work with comprehensive warranties and satisfaction guarantees.',
+            'We validate every installation with rigorous commissioning protocols to ensure design parameters are met.',
     },
     {
         icon: TrendingUp,
-        title: 'Energy Efficient',
+        title: 'Energy Optimization',
         description:
-            'Solutions designed to reduce energy consumption and lower operational costs.',
+            'Focus on high-EER/SEER equipment and smart controls to minimize operational costs and grid dependency.',
     },
     {
         icon: HeadphonesIcon,
-        title: 'Dedicated Support',
+        title: 'Lifecycle Asset Management',
         description:
-            'Personalized customer service and ongoing support for all your HVAC needs.',
+            'Long-term partnership approach focusing on total cost of ownership and sustained system performance.',
     },
 ];

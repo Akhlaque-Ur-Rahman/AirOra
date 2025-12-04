@@ -22,7 +22,7 @@ export function About() {
             {/* Main Image */}
             <div className="relative rounded-2xl overflow-hidden shadow-2xl h-[500px]">
               <Image
-                src="/images/placeholder.jpg"
+                src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80"
                 alt="Professional team meeting"
                 fill
                 className="object-cover"
@@ -39,7 +39,7 @@ export function About() {
               transition={{ delay: 0.3, duration: 0.5 }}
             >
               <div className="text-5xl font-bold text-[#1CB9F6] mb-2">18+</div>
-              <div className="text-sm">Years of Excellence</div>
+              <div className="text-sm">Years of Engineering Leadership</div>
             </motion.div>
           </motion.div>
 
@@ -51,11 +51,11 @@ export function About() {
             transition={{ duration: 0.7 }}
           >
             <SectionHeader
-              badge={<IconBadge icon={<UsersRound />} label="About Us" />}
+              badge={<IconBadge icon={<UsersRound />} label="Corporate Profile" />}
               heading={
                 <>
-                  Leading the Way in{' '}
-                  <span className="text-[#1CB9F6]">HVAC Innovation</span>
+                  Pioneering Advanced{' '}
+                  <span className="text-[#1CB9F6]">HVAC Engineering</span> in India
                 </>
               }
               description=""
@@ -64,17 +64,17 @@ export function About() {
             />
 
             <p className="text-gray-600 mb-6 mt-6">
-              Since 2005, AirOra has been at the forefront of providing
-              cutting-edge heating, ventilation, and air conditioning solutions.
-              Our commitment to excellence and customer satisfaction has made us
-              the preferred choice for businesses and homeowners alike.
+              Established in 2005, AirOra has evolved into India’s foremost
+              authority on precision climate control. We engineer bespoke
+              heating, ventilation, and air conditioning infrastructures for the
+              commercial and industrial sectors.
             </p>
 
             <p className="text-gray-600 mb-8">
-              We specialize in designing, installing, and maintaining HVAC
-              systems that deliver optimal performance, energy efficiency, and
-              long-term reliability. Our team of certified professionals brings
-              decades of combined experience to every project.
+              Our expertise encompasses the design, implementation, and
+              management of complex VRF/VRV systems and central cooling plants.
+              We prioritize energy efficiency and system longevity, ensuring
+              optimal performance under peak load conditions.
             </p>
 
             {/* Highlights List */}

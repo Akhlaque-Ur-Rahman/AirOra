@@ -2,6 +2,7 @@
 
 import { motion } from 'motion/react';
 import { Button } from '@/components/ui/button';
+import Image from 'next/image';
 import { IconBadge } from '@/components/shared';
 import Link from 'next/link';
 import { ArrowRight, Phone, Award } from 'lucide-react';
@@ -31,13 +32,12 @@ export function Hero() {
     <section id="home" className="relative min-h-[100dvh] flex items-start lg:items-center py-24 lg:pt-20">
       {/* Background Video with Overlay */}
       <div className="absolute inset-0 z-0 overflow-hidden">
-        <video
-          src="https://videos.pexels.com/video-files/856982/856982-hd_1280_720_24fps.mp4"
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="w-full h-full object-cover"
+        <Image
+          src="https://images.unsplash.com/photo-1581090700227-1e37b190418e?auto=format&fit=crop&w=2000&q=80"
+          alt="HVAC Industrial Background"
+          fill
+          className="object-cover"
+          priority
         />
         {/* Dark Overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#0B1C3F]/95 via-[#0B1C3F]/85 to-[#0B1C3F]/70" />
@@ -55,7 +55,7 @@ export function Hero() {
           <motion.div variants={itemVariants} className="mb-6 mt-6">
             <IconBadge 
               icon={<Award />} 
-              label="Leading HVAC Solutions Provider" 
+              label="Premier Industrial & Commercial HVAC Engineering" 
               className="bg-[#1CB9F6]/20 border-[#1CB9F6]/40"
             />
           </motion.div>
@@ -66,9 +66,9 @@ export function Hero() {
             className="text-white mb-6 text-4xl lg:text-6xl font-bold"
             style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.3)' }}
           >
-            Innovative Climate Control{' '}
-            <span className="text-[#1CB9F6]">Solutions</span> for Modern
-            Buildings
+            Precision-Engineered Climate Control{' '}
+            <span className="text-[#1CB9F6]">Solutions</span> for India’s Modern
+            Infrastructure
           </motion.h1>
 
           {/* Subheading */}
@@ -76,9 +76,9 @@ export function Hero() {
             variants={itemVariants}
             className="text-white/90 text-lg lg:text-xl mb-8 leading-relaxed"
           >
-            Expert HVAC installation, maintenance, and repair services for
-            commercial, industrial, and residential properties. Delivering
-            comfort and efficiency since 2005.
+            Delivering high-performance commercial HVAC solutions and industrial
+            cooling systems tailored to India’s climate conditions. Optimizing
+            building efficiency and airflow dynamics since 2005.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -112,15 +112,15 @@ export function Hero() {
           >
             <div>
               <div className="text-3xl font-bold text-[#1CB9F6]">500+</div>
-              <div>Projects Completed</div>
+              <div>Commercial Projects</div>
             </div>
             <div>
               <div className="text-3xl font-bold text-[#1CB9F6]">18+</div>
-              <div>Years Experience</div>
+              <div>Years Engineering</div>
             </div>
             <div>
               <div className="text-3xl font-bold text-[#1CB9F6]">100%</div>
-              <div>Client Satisfaction</div>
+              <div>Client Retention</div>
             </div>
           </motion.div>
         </motion.div>

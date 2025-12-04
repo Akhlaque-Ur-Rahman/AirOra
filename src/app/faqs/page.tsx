@@ -12,29 +12,29 @@ import {
 
 const faqs = [
   {
-    question: 'What areas do you serve?',
+    question: 'What is your operational coverage area for industrial projects?',
     answer:
-      'We serve the entire metropolitan area and surrounding suburbs. Please contact us to confirm if we cover your specific location.',
+      'We execute turnkey HVAC projects across major industrial corridors in India. For specific site feasibility, please consult our project management team.',
   },
   {
-    question: 'Do you offer emergency services?',
+    question: 'Do you provide 24/7 critical system support?',
     answer:
-      'Yes, we offer 24/7 emergency HVAC repair services for urgent issues that cannot wait until regular business hours.',
+      'Yes, we offer round-the-clock emergency response and rapid mobilization for mission-critical cooling systems in data centers, healthcare facilities, and manufacturing plants.',
   },
   {
-    question: 'How often should I have my HVAC system serviced?',
+    question: 'What are the recommended maintenance intervals for commercial VRF systems?',
     answer:
-      'We recommend scheduling maintenance at least twice a year—once in the spring for your cooling system and once in the fall for your heating system.',
+      'We adhere to OEM guidelines and ASHRAE standards, typically recommending comprehensive preventive maintenance quarterly, with monthly filter checks for high-load environments.',
   },
   {
-    question: 'What brands do you work with?',
+    question: 'Are your engineers certified for specialized equipment?',
     answer:
-      'We work with all major HVAC brands and are certified installers for top manufacturers, ensuring high-quality service regardless of your system type.',
+      'Our technical team comprises ISHRAE-certified engineers and factory-trained technicians proficient in handling major global HVAC brands including Daikin, Carrier, Trane, and Mitsubishi Electric.',
   },
   {
-    question: 'Do you offer financing options?',
+    question: 'Do you offer energy performance contracting?',
     answer:
-      'Yes, we offer flexible financing plans to help make new installations and major repairs more affordable. Contact us for details.',
+      'Yes, we provide ROI-focused energy retrofit solutions and financing models designed to offset capital expenditure through operational savings.',
   },
 ];
 
@@ -42,16 +42,17 @@ export default function FAQsPage() {
   return (
     <>
       <HeroVideoSection
-        badge={<IconBadge icon={<HelpCircle />} label="FAQs" className="bg-[#1CB9F6]/20 text-white border-[#1CB9F6]/50" />}
-        title="Frequently Asked Questions"
-        subtitle="Find answers to common questions about our services, maintenance, and more."
+        badge={<IconBadge icon={<HelpCircle />} label="Technical Support" className="bg-[#1CB9F6]/20 text-white border-[#1CB9F6]/50" />}
+        title="Engineering FAQs"
+        subtitle="Technical clarifications regarding our operational protocols, maintenance standards, and project execution methodologies."
+        backgroundImage="https://images.unsplash.com/photo-1486304873000-235643847519?auto=format&fit=crop&w=2000&q=80"
       />
 
       <main className="container mx-auto max-w-7xl py-20 px-6">
         <SectionHeader
-          badge={<IconBadge icon={<HelpCircle />} label="Support" />}
-          heading="How Can We Help?"
-          description="Browse through our most frequently asked questions below. If you can't find what you're looking for, feel free to contact us."
+          badge={<IconBadge icon={<HelpCircle />} label="Common Queries" />}
+          heading="Technical & Operational Inquiries"
+          description="Find answers to frequently asked questions about our commercial and industrial HVAC engineering services."
         />
 
         <div className="max-w-3xl mx-auto">

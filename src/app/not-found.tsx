@@ -7,13 +7,13 @@ export default function NotFound() {
       <div className="text-center">
         <h1 className="text-6xl font-bold text-[#0B1C3F] mb-4">404</h1>
         <h2 className="text-2xl font-semibold text-[#0B1C3F] mb-4">
-          Page Not Found
+          Resource Not Located
         </h2>
         <p className="text-gray-600 mb-8">
-          Sorry, we couldn&apos;t find the page you&apos;re looking for.
+          The requested engineering document or system page could not be retrieved. It may have been moved or archived.
         </p>
         <Button asChild className="bg-[#1CB9F6] hover:bg-[#0B1C3F] text-white">
-          <Link href="/">Return Home</Link>
+          <Link href="/">Return to Dashboard</Link>
         </Button>
       </div>
     </div>

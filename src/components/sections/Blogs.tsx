@@ -8,28 +8,28 @@ import { Calendar, User, Newspaper } from 'lucide-react';
 
 const blogs = [
   {
-    title: 'Top 5 Tips for Energy Efficiency this Summer',
+    title: 'Optimizing Chiller Efficiency During Peak Summer Loads',
     excerpt:
-      'Learn how to keep your home cool while saving on energy bills with these simple yet effective tips.',
-    date: 'May 15, 2024',
-    author: 'John Smith',
-    category: 'Tips & Tricks',
+      'Strategies for reducing energy consumption in commercial buildings through advanced load management and system calibration.',
+    date: 'May 15, 2025',
+    author: 'Rajesh Kumar',
+    category: 'Energy Efficiency',
   },
   {
-    title: 'The Importance of Regular HVAC Maintenance',
+    title: 'Lifecycle Benefits of Predictive HVAC Maintenance',
     excerpt:
-      'Discover why routine maintenance is crucial for extending the lifespan of your system and preventing costly repairs.',
-    date: 'April 22, 2024',
-    author: 'Sarah Johnson',
+      'How data-driven maintenance protocols prevent critical system failures and extend asset lifespan in industrial facilities.',
+    date: 'April 22, 2025',
+    author: 'Priya Sharma',
     category: 'Maintenance',
   },
   {
-    title: 'Choosing the Right Air Conditioner for Your Home',
+    title: 'VRF vs. Chilled Water Systems: A Comparative Analysis',
     excerpt:
-      'A comprehensive guide to understanding different AC types and finding the perfect match for your space.',
-    date: 'March 10, 2024',
-    author: 'Mike Williams',
-    category: 'Guides',
+      'Evaluating the technical merits of Variable Refrigerant Flow systems versus central chillers for large-scale commercial applications.',
+    date: 'March 10, 2025',
+    author: 'Amit Patel',
+    category: 'Technical Guides',
   },
 ];
 
@@ -38,9 +38,9 @@ export function Blogs() {
     <section id="blogs" className="py-20 lg:py-28 bg-gray-50">
       <div className="container mx-auto max-w-7xl px-6 lg:px-8">
         <SectionHeader
-          badge={<IconBadge icon={<Newspaper />} label="Our Blog" />}
-          heading="Latest News & Insights"
-          description="Stay updated with the latest trends, tips, and news from the HVAC industry."
+          badge={<IconBadge icon={<Newspaper />} label="Technical Insights" />}
+          heading="HVAC Industry Analysis & Updates"
+          description="Expert perspectives on energy efficiency, system maintenance, and emerging cooling technologies."
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

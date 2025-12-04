@@ -7,16 +7,17 @@ export default function AboutPage() {
   return (
     <main className="pt-20">
       <HeroVideoSection
-        badge={<IconBadge icon={<History />} label="Our Story" className="bg-[#1CB9F6]/20 text-white border-[#1CB9F6]/50" />}
-        title="Building Comfort Since 2005"
-        subtitle="Learn about our journey, our values, and the team dedicated to your comfort."
+        badge={<IconBadge icon={<History />} label="Our Corporate Legacy" className="bg-[#1CB9F6]/20 text-white border-[#1CB9F6]/50" />}
+        title="Engineering Comfort Since 2005"
+        subtitle="A legacy of technical excellence in delivering advanced HVAC solutions for India’s most demanding commercial and industrial environments."
+        backgroundImage="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=2000&q=80"
       />
 
       <div className="py-12">
         <SectionHeader
-          badge={<IconBadge icon={<Users />} label="Who We Are" />}
-          heading="Excellence in Every Installation"
-          description="We are more than just an HVAC company; we are your partners in creating the perfect indoor environment."
+          badge={<IconBadge icon={<Users />} label="Organizational Ethos" />}
+          heading="Precision in Every Project"
+          description="We are not just contractors; we are thermal management engineers dedicated to optimizing your operational environment."
         />
       </div>
 

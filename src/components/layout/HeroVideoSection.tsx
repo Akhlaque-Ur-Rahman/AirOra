@@ -2,12 +2,14 @@
 
 import { motion } from 'motion/react';
 import { Badge } from '@/components/shared';
+import Image from 'next/image';
 
 interface HeroVideoSectionProps {
   title: string;
   subtitle: string;
   badge?: string | React.ReactNode;
   children?: React.ReactNode;
+  backgroundImage?: string;
 }
 
 export function HeroVideoSection({
@@ -15,18 +17,18 @@ export function HeroVideoSection({
   subtitle,
   badge,
   children,
+  backgroundImage,
 }: HeroVideoSectionProps) {
   return (
     <section className="relative w-full h-[60vh] md:h-[70vh] min-h-[400px] flex items-center justify-center overflow-hidden">
       {/* Background Video */}
       <div className="absolute inset-0 z-0">
-        <video
-          src="https://videos.pexels.com/video-files/856982/856982-hd_1280_720_24fps.mp4"
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="w-full h-full object-cover"
+        <Image
+          src={backgroundImage || "https://images.unsplash.com/photo-1581090700227-1e37b190418e?auto=format&fit=crop&w=2000&q=80"}
+          alt="HVAC Services Background"
+          fill
+          className="object-cover"
+          priority
         />
         {/* Gradient Overlay - Matching Hero.tsx style but adapted for centered content */}
         <div className="absolute inset-0 bg-gradient-to-b from-[#0B1C3F]/90 via-[#0B1C3F]/80 to-[#0B1C3F]/90" />

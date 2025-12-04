@@ -27,9 +27,9 @@ export function WhyChooseUs() {
     <section className="py-20 lg:py-28 bg-white">
       <div className="container mx-auto max-w-7xl px-6 lg:px-8">
         <SectionHeader
-          badge={<IconBadge icon={<CheckCircle />} label="Why Choose Us" />}
-          heading="Your Trusted HVAC Partner"
-          description="We combine technical expertise with exceptional customer service to deliver HVAC solutions that exceed expectations."
+          badge={<IconBadge icon={<CheckCircle />} label="The AirOra Advantage" />}
+          heading="Engineered for Performance & Reliability"
+          description="Leveraging advanced airflow dynamics and energy-efficient technologies to deliver superior indoor environmental quality."
         />
 
         {/* Features Grid */}

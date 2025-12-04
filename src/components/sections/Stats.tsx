@@ -21,9 +21,9 @@ export function Stats() {
 
       <div className="container mx-auto max-w-7xl px-6 lg:px-8 relative z-10">
         <SectionHeader
-          badge={<IconBadge icon={<BarChart />} label="Our Impact" />}
-          heading={<span className="text-white">Numbers That Speak for Themselves</span>}
-          description="Our track record demonstrates our commitment to excellence and customer satisfaction."
+          badge={<IconBadge icon={<BarChart />} label="Operational Metrics" />}
+          heading={<span className="text-white">Engineering Impact & Scale</span>}
+          description="Quantifiable results demonstrating our commitment to technical precision and large-scale project execution."
           className="[&_p]:text-white/80"
         />
 

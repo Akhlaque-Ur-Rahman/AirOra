@@ -1,8 +1,8 @@
 export const aboutHighlights = [
-    '18+ years of industry experience',
-    '500+ successful projects delivered',
-    'Certified and licensed technicians',
-    '24/7 emergency support available',
-    'Energy-efficient solutions',
-    '100% customer satisfaction guarantee',
+    '18+ Years of Specialized Engineering',
+    '500+ Commercial Projects Commissioned',
+    'ISHRAE-Certified Technical Staff',
+    '24/7 Critical System Support',
+    'Focus on High-Efficiency VRF/VRV Systems',
+    'Performance-Guaranteed Installations',
 ];
