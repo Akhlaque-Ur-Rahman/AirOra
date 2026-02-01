@@ -94,7 +94,7 @@ export default async function BlogPostPage(props: BlogPostPageProps) {
       </div>
 
       {/* Article Content */}
-      <div className="container mx-auto max-w-3xl px-6 lg:px-8">
+      <div className="container mx-auto max-w-4xl px-6 lg:px-8">
         <div 
           className="prose prose-xl max-w-none prose-headings:text-[#0B1C3F] prose-a:text-[#1CB9F6] prose-img:rounded-xl"
           dangerouslySetInnerHTML={{ __html: blog.content }} 
