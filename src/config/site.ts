@@ -52,6 +52,11 @@ export const siteMetadata: Metadata = {
         index: true,
         follow: true,
     },
+    icons: {
+        icon: '/logo/favicon.ico',
+        shortcut: '/logo/favicon.ico',
+        apple: '/logo/favicon.ico',
+    },
 };
 
 export const siteViewport: Viewport = {

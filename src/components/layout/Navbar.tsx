@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
 import { Menu, MessageCircle } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { navLinks } from '@/config/navigation';
@@ -45,8 +46,27 @@ export function Navbar() {
           whileHover={{ scale: 1.05 }}
           transition={{ type: 'spring', stiffness: 400 }}
         >
-          <Link href="/" className="text-[#0B1C3F] text-2xl font-bold">
-            <span className="text-[#1CB9F6]">AirOra</span>
+          <Link href="/" className="flex flex-col items-center group">
+            <div 
+              className={`relative mb-[-5px] transition-all duration-300 ease-in-out ${
+                scrolled ? 'w-8 h-8' : 'w-10 h-10'
+              }`}
+            >
+              <Image 
+                src="/logo/airoralogo.svg" 
+                alt="AirOra Logo" 
+                fill
+                className="object-contain"
+                priority
+              />
+            </div>
+            <span 
+              className={`font-bold leading-none transition-all duration-300 ease-in-out text-[#023F96] ${
+                scrolled ? 'text-lg' : 'text-xl'
+              }`}
+            >
+              AirOra
+            </span>
           </Link>
         </motion.div>
 
@@ -78,8 +98,19 @@ export function Navbar() {
             <div className="flex flex-col h-full">
               {/* Drawer Header */}
               <div className="p-6 border-b border-white/10">
-                <Link href="/" onClick={() => setMobileMenuOpen(false)} className="text-2xl font-bold text-white">
-                  Air<span className="text-[#1CB9F6]">Ora</span>
+                <Link href="/" onClick={() => setMobileMenuOpen(false)} className="flex flex-col items-center">
+                  <div className="relative w-12 h-12 mb-[-2px]">
+                    <Image 
+                      src="/logo/airoralogo.svg" 
+                      alt="AirOra Logo" 
+                      fill
+                      className="object-contain brightness-0 invert" 
+                      priority
+                    />
+                  </div>
+                  <span className="text-2xl font-bold text-white leading-none">
+                    AirOra
+                  </span>
                 </Link>
               </div>
 

@@ -56,8 +56,8 @@ export function Footer() {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <div className="text-2xl font-bold mb-4">
-              <span className="text-[#1CB9F6]">AirOra</span>
+            <div className="text-2xl font-bold mb-4 text-[#023F96]">
+              AirOra
             </div>
             <p className="text-white/70 mb-6">
               Your trusted partner for innovative HVAC solutions. Delivering
