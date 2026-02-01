@@ -12,6 +12,7 @@ import {
   ArrowUp,
 } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { APP_NAME, CONTACT_INFO, SOCIAL_LINKS } from '@/lib/constants';
 
 export function Footer() {
@@ -56,9 +57,19 @@ export function Footer() {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <div className="text-2xl font-bold mb-4 text-[#023F96]">
-              AirOra
-            </div>
+            <Link href="/" className="flex flex-col items-start mb-6">
+              <div className="relative w-10 h-10 mb-2">
+                <Image 
+                  src="/logo/airoralogo.svg" 
+                  alt="AirOra Logo" 
+                  fill
+                  className="object-contain brightness-0 invert" 
+                />
+              </div>
+              <span className="text-2xl font-bold text-white leading-none">
+                AirOra
+              </span>
+            </Link>
             <p className="text-white/70 mb-6">
               Your trusted partner for innovative HVAC solutions. Delivering
               comfort, efficiency, and excellence since 2005.

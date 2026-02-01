@@ -61,7 +61,7 @@ export function Navbar() {
               />
             </div>
             <span 
-              className={`font-bold leading-none transition-all duration-300 ease-in-out text-[#023F96] ${
+              className={`mt-1 font-bold leading-none transition-all duration-300 ease-in-out text-[#023F96] ${
                 scrolled ? 'text-lg' : 'text-xl'
               }`}
             >
