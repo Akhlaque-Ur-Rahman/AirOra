@@ -183,7 +183,7 @@ export function Footer() {
         <div className="container mx-auto max-w-7xl px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-white/60 text-sm text-center md:text-left">
-              © 2025 AirOra. All rights reserved. | Designed by <a href="https://edunexservices.com" target="_blank" className="text-[#1CB9F6] hover:text-[#1CB9F6]/80 transition-colors">EduNex</a> with ❤️
+              © 2025 AirOra. All rights reserved. | Designed by <a href="https://edunexservices.in" target="_blank" className="text-[#1CB9F6] hover:text-[#1CB9F6]/80 transition-colors">EduNex</a> with ❤️
             </p>
 
             {/* Legal Links */}
