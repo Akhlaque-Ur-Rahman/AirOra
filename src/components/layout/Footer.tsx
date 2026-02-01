@@ -104,7 +104,7 @@ export function Footer() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            <h4 className="text-white text-xl font-semibold mb-4">Our Services</h4>
+            <h3 className="text-white text-xl font-semibold mb-4">Our Services</h3>
             <ul className="space-y-2">
               {footerLinks.services.map((link, index) => (
                 <li key={index}>
@@ -126,7 +126,7 @@ export function Footer() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <h4 className="text-white text-xl font-semibold mb-4">Company</h4>
+            <h3 className="text-white text-xl font-semibold mb-4">Company</h3>
             <ul className="space-y-2">
               {footerLinks.company.map((link, index) => (
                 <li key={index}>
@@ -148,7 +148,7 @@ export function Footer() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.3 }}
           >
-            <h4 className="text-white text-xl font-semibold mb-4">Resources</h4>
+            <h3 className="text-white text-xl font-semibold mb-4">Resources</h3>
             <ul className="space-y-2 mb-6">
               {footerLinks.resources.map((link, index) => (
                 <li key={index}>
@@ -209,6 +209,7 @@ export function Footer() {
         viewport={{ once: false, margin: '-500px' }}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
+        aria-label="Scroll to top"
       >
         <ArrowUp className="w-6 h-6 text-white" />
       </motion.button>

@@ -6,7 +6,7 @@ export const siteConfig = {
     description:
         'Expert HVAC installation, maintenance, and repair services for commercial, industrial, and residential properties. Delivering comfort and efficiency since 2005.',
     url: 'https://airora.com',
-    ogImage: '/og-image.jpg',
+    ogImage: '/images/engineering.webp',
     keywords: [
         'HVAC',
         'heating',

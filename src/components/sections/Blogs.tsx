@@ -6,32 +6,7 @@ import Link from 'next/link';
 import { SectionHeader, Card, IconBadge } from '@/components/shared';
 import { Calendar, User, Newspaper } from 'lucide-react';
 
-const blogs = [
-  {
-    title: 'Optimizing Chiller Efficiency During Peak Summer Loads',
-    excerpt:
-      'Strategies for reducing energy consumption in commercial buildings through advanced load management and system calibration.',
-    date: 'May 15, 2025',
-    author: 'Rajesh Kumar',
-    category: 'Energy Efficiency',
-  },
-  {
-    title: 'Lifecycle Benefits of Predictive HVAC Maintenance',
-    excerpt:
-      'How data-driven maintenance protocols prevent critical system failures and extend asset lifespan in industrial facilities.',
-    date: 'April 22, 2025',
-    author: 'Priya Sharma',
-    category: 'Maintenance',
-  },
-  {
-    title: 'VRF vs. Chilled Water Systems: A Comparative Analysis',
-    excerpt:
-      'Evaluating the technical merits of Variable Refrigerant Flow systems versus central chillers for large-scale commercial applications.',
-    date: 'March 10, 2025',
-    author: 'Amit Patel',
-    category: 'Technical Guides',
-  },
-];
+import { blogs } from '@/data/blogs';
 
 export function Blogs() {
   return (

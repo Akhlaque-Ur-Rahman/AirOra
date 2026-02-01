@@ -1,4 +1,5 @@
 import type { NextConfig } from 'next';
+import withBundleAnalyzer from '@next/bundle-analyzer';
 
 const nextConfig: NextConfig = {
     reactStrictMode: true,
@@ -23,8 +24,12 @@ const nextConfig: NextConfig = {
 
     // Enable experimental features if needed
     experimental: {
-        optimizePackageImports: ['lucide-react', '@radix-ui/react-icons'],
+        optimizePackageImports: ['lucide-react', 'date-fns', 'lodash-es', 'ramda', 'motion/react', '@radix-ui/react-icons', '@radix-ui/react-dialog', '@radix-ui/react-slot'],
     },
 };
 
-export default nextConfig;
+const bundleAnalyzer = withBundleAnalyzer({
+    enabled: process.env.ANALYZE === 'true',
+});
+
+export default bundleAnalyzer(nextConfig);

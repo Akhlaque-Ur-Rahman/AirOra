@@ -2,6 +2,7 @@
 
 import { motion } from 'motion/react';
 import { SectionHeader, IconWrapper, CardGrid, IconBadge } from '@/components/shared';
+import Image from 'next/image';
 import { features } from '@/data/features';
 import { CheckCircle } from 'lucide-react';
 
@@ -34,7 +35,7 @@ export function WhyChooseUs() {
 
         {/* Features Grid */}
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -69,6 +70,46 @@ export function WhyChooseUs() {
             </motion.div>
           ))}
         </motion.div>
+
+        {/* Technical Showcase Split */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center bg-[#0B1C3F] rounded-3xl overflow-hidden">
+          <div className="p-8 lg:p-16">
+            <h3 className="text-3xl font-bold text-white mb-6">
+              Precision Inspections & Technical Excellence
+            </h3>
+            <p className="text-white/80 mb-8 text-lg">
+              Our engineers use advanced diagnostic tools to ensure every system 
+              operates at peak efficiency. From pressure balancing to thermal 
+              imaging, we leave no detail to chance.
+            </p>
+            <div className="space-y-4">
+              {[
+                'NIST-calibrated measurement tools',
+                'Advanced refrigerant diagnostic systems',
+                'Real-time airflow analysis',
+                'Comprehensive system health reports'
+              ].map((item, i) => (
+                <div key={i} className="flex items-center text-white/90">
+                  <CheckCircle className="w-5 h-5 text-[#1CB9F6] mr-3" />
+                  {item}
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="relative h-[400px] lg:h-full min-h-[500px]">
+            <Image
+              src="/images/7.webp"
+              alt="Technical pressure gauge inspection"
+              fill
+              className="object-cover"
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              loading="lazy"
+            />
+            {/* Overlay for better integration */}
+            <div className="absolute inset-0 bg-gradient-to-r from-[#0B1C3F] via-transparent to-transparent lg:block hidden" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0B1C3F] via-transparent to-transparent lg:hidden block" />
+          </div>
+        </div>
       </div>
     </section>
   );

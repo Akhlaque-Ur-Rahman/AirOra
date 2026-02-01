@@ -71,10 +71,35 @@
     @apply border-border;
   }
 
-  html,
+  html {}
+
   body {
     @apply bg-background text-foreground;
     overflow-x: hidden;
     width: 100%;
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #0B1C3F;
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #1CB9F6;
+  }
+
+  /* Selection Color */
+  ::selection {
+    background-color: #1CB9F6;
+    color: white;
   }
 }

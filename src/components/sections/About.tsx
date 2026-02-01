@@ -22,11 +22,12 @@ export function About() {
             {/* Main Image */}
             <div className="relative rounded-2xl overflow-hidden shadow-2xl h-[500px]">
               <Image
-                src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80"
-                alt="Professional team meeting"
+                src="/images/8.webp"
+                alt="AirOra team technical discussion and training"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"
+                loading="lazy"
               />
             </div>
 

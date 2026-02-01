@@ -49,7 +49,7 @@ export function Hero() {
         <motion.div
           className="max-w-3xl"
           variants={containerVariants}
-          initial="hidden"
+          initial={false}
           animate="visible"
         >
           {/* Badge */}
