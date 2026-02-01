@@ -3,6 +3,7 @@
 import { HeroVideoSection } from '@/components/layout/HeroVideoSection';
 import { SectionHeader, Card } from '@/components/shared';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Calendar, User } from 'lucide-react';
 
 import { blogs } from '@/data/blogs';
@@ -25,26 +26,41 @@ export default function BlogsPage() {
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {blogs.map((blog, index) => (
+{blogs.map((blog, index) => (
             <Link key={index} href={`/blogs/${blog.slug}`} className="block h-full">
-              <Card variant="hover-lift" className="flex flex-col h-full hover:border-[#1CB9F6]/30">
-                <div className="mb-4 flex items-center gap-4 text-sm text-gray-500">
-                  <span className="bg-[#1CB9F6]/10 text-[#1CB9F6] px-2 py-1 rounded">
-                    {blog.category}
-                  </span>
+              <Card
+                variant="hover-lift"
+                className="flex flex-col h-full hover:border-[#1CB9F6]/30 p-0 overflow-hidden"
+              >
+                <div className="relative w-full h-48">
+                  <Image
+                    src={blog.image}
+                    alt={blog.title}
+                    fill
+                    className="object-cover"
+                  />
                 </div>
-                <h3 className="text-xl font-bold text-[#0B1C3F] mb-3 line-clamp-2">
-                  {blog.title}
-                </h3>
-                <p className="text-gray-600 mb-6 flex-grow line-clamp-3">{blog.excerpt}</p>
-                <div className="flex items-center justify-between text-sm text-gray-500 pt-4 border-t border-gray-100">
-                  <div className="flex items-center gap-2">
-                    <User className="w-4 h-4" />
-                    {blog.author}
+                <div className="p-6 flex flex-col flex-grow">
+                  <div className="mb-4 flex items-center gap-4 text-sm text-gray-500">
+                    <span className="bg-[#1CB9F6]/10 text-[#1CB9F6] px-2 py-1 rounded">
+                      {blog.category}
+                    </span>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <Calendar className="w-4 h-4" />
-                    {blog.date}
+                  <h3 className="text-xl font-bold text-[#0B1C3F] mb-3 line-clamp-2">
+                    {blog.title}
+                  </h3>
+                  <p className="text-gray-600 mb-6 flex-grow line-clamp-3">
+                    {blog.excerpt}
+                  </p>
+                  <div className="flex items-center justify-between text-sm text-gray-500 pt-4 border-t border-gray-100 mt-auto w-full">
+                    <div className="flex items-center gap-2">
+                      <User className="w-4 h-4" />
+                      {blog.author}
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Calendar className="w-4 h-4" />
+                      {blog.date}
+                    </div>
                   </div>
                 </div>
               </Card>
