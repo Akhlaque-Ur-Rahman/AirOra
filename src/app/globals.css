@@ -97,9 +97,9 @@
     background: #1CB9F6;
   }
 
-  /* Selection Color */
+  /* Selection Color - Improved Contrast for Accessibility */
   ::selection {
-    background-color: #1CB9F6;
+    background-color: #0d9bd5; /* Use a darker blue variant for better WCAG contrast */
     color: white;
   }
 }

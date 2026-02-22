@@ -1,11 +1,11 @@
-'use client';
+"use client";
 
-import { motion } from 'motion/react';
-import { Button } from '@/components/ui/button';
-import Image from 'next/image';
-import { IconBadge } from '@/components/shared';
-import Link from 'next/link';
-import { ArrowRight, Phone, Award } from 'lucide-react';
+import { motion } from "motion/react";
+import { Button } from "@/components/ui/button";
+import Image from "next/image";
+import { IconBadge } from "@/components/shared";
+import Link from "next/link";
+import { ArrowRight, Phone, Award } from "lucide-react";
 
 export function Hero() {
   const containerVariants = {
@@ -24,12 +24,15 @@ export function Hero() {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6, ease: ['easeOut'] as any },
+      transition: { duration: 0.6, ease: ["easeOut"] as any },
     },
   };
 
   return (
-    <section id="home" className="relative min-h-[100dvh] flex items-start lg:items-center py-24 lg:pt-20">
+    <section
+      id="home"
+      className="relative min-h-[100dvh] flex items-start lg:items-center py-24 lg:pt-20"
+    >
       {/* Background Video with Overlay */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <Image
@@ -54,9 +57,9 @@ export function Hero() {
         >
           {/* Badge */}
           <motion.div variants={itemVariants} className="mb-6 mt-6">
-            <IconBadge 
-              icon={<Award />} 
-              label="Premier Industrial & Commercial HVAC Engineering" 
+            <IconBadge
+              icon={<Award />}
+              label="Premier Industrial & Commercial HVAC Engineering"
               className="bg-[#1CB9F6]/20 border-[#1CB9F6]/40"
             />
           </motion.div>
@@ -65,9 +68,9 @@ export function Hero() {
           <motion.h1
             variants={itemVariants}
             className="text-white mb-6 text-4xl lg:text-6xl font-bold"
-            style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.3)' }}
+            style={{ textShadow: "2px 2px 8px rgba(0,0,0,0.3)" }}
           >
-            Precision-Engineered Climate Control{' '}
+            Precision-Engineered Climate Control{" "}
             <span className="text-[#1CB9F6]">Solutions</span> for India’s Modern
             Infrastructure
           </motion.h1>
@@ -91,6 +94,7 @@ export function Hero() {
               <Button
                 size="lg"
                 className="bg-[#1CB9F6] hover:bg-[#1CB9F6]/90 text-white group"
+                aria-label="Get a free consultation from AirOra"
               >
                 Get Free Consultation
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -100,6 +104,7 @@ export function Hero() {
               size="lg"
               variant="outline"
               className="border-2 border-white "
+              aria-label="Call AirOra now"
             >
               <Phone className="mr-2 w-5 h-5" />
               Call Now
@@ -126,8 +131,6 @@ export function Hero() {
           </motion.div>
         </motion.div>
       </div>
-
-
     </section>
   );
 }

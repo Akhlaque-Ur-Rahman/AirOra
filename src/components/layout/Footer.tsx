@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import { motion } from 'motion/react';
+import { motion } from "motion/react";
 import {
   Facebook,
   Twitter,
@@ -10,39 +10,39 @@ import {
   Phone,
   MapPin,
   ArrowUp,
-} from 'lucide-react';
-import Link from 'next/link';
-import Image from 'next/image';
-import { APP_NAME, CONTACT_INFO, SOCIAL_LINKS } from '@/lib/constants';
+} from "lucide-react";
+import Link from "next/link";
+import Image from "next/image";
+import { APP_NAME, CONTACT_INFO, SOCIAL_LINKS } from "@/lib/constants";
 
 export function Footer() {
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const footerLinks = {
     services: [
-      { name: 'All Services', href: '/services' },
-      { name: 'HVAC Installation', href: '/services' },
-      { name: 'Maintenance', href: '/services' },
-      { name: 'Repairs', href: '/services' },
+      { name: "All Services", href: "/services" },
+      { name: "HVAC Installation", href: "/services" },
+      { name: "Maintenance", href: "/services" },
+      { name: "Repairs", href: "/services" },
     ],
     company: [
-      { name: 'About Us', href: '/about' },
-      { name: 'Contact', href: '/contact' },
-      { name: 'Blogs', href: '/blogs' },
+      { name: "About Us", href: "/about" },
+      { name: "Contact", href: "/contact" },
+      { name: "Blogs", href: "/blogs" },
     ],
     resources: [
-      { name: 'FAQs', href: '/faqs' },
-      { name: 'Support', href: '/contact' },
+      { name: "FAQs", href: "/faqs" },
+      { name: "Support", href: "/contact" },
     ],
   };
 
   const socialLinks = [
-    { icon: Facebook, href: SOCIAL_LINKS.facebook, label: 'Facebook' },
-    { icon: Twitter, href: SOCIAL_LINKS.twitter, label: 'Twitter' },
-    { icon: Linkedin, href: SOCIAL_LINKS.linkedin, label: 'LinkedIn' },
-    { icon: Instagram, href: SOCIAL_LINKS.instagram, label: 'Instagram' },
+    { icon: Facebook, href: SOCIAL_LINKS.facebook, label: "Facebook" },
+    { icon: Twitter, href: SOCIAL_LINKS.twitter, label: "Twitter" },
+    { icon: Linkedin, href: SOCIAL_LINKS.linkedin, label: "LinkedIn" },
+    { icon: Instagram, href: SOCIAL_LINKS.instagram, label: "Instagram" },
   ];
 
   return (
@@ -59,11 +59,11 @@ export function Footer() {
           >
             <Link href="/" className="flex flex-col items-start mb-6">
               <div className="relative w-10 h-10 mb-2">
-                <Image 
-                  src="/logo/airoralogo.svg" 
-                  alt="AirOra Logo" 
+                <Image
+                  src="/logo/airoralogo.svg"
+                  alt="AirOra Logo - HVAC Precision Engineering"
                   fill
-                  className="object-contain brightness-0 invert" 
+                  className="object-contain brightness-0 invert"
                 />
               </div>
               <span className="text-2xl font-bold text-white leading-none">
@@ -97,7 +97,7 @@ export function Footer() {
                 <motion.a
                   key={index}
                   href={social.href}
-                  aria-label={social.label}
+                  aria-label={`Follow AirOra on ${social.label}`}
                   className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#1CB9F6] transition-colors"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
@@ -115,7 +115,9 @@ export function Footer() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            <h3 className="text-white text-xl font-semibold mb-4">Our Services</h3>
+            <h3 className="text-white text-xl font-semibold mb-4">
+              Our Services
+            </h3>
             <ul className="space-y-2">
               {footerLinks.services.map((link, index) => (
                 <li key={index}>
@@ -172,8 +174,6 @@ export function Footer() {
                 </li>
               ))}
             </ul>
-
-
           </motion.div>
         </div>
       </div>
@@ -183,7 +183,15 @@ export function Footer() {
         <div className="container mx-auto max-w-7xl px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-white/60 text-sm text-center md:text-left">
-              © 2025 AirOra. All rights reserved. | Designed by <a href="https://edunexservices.in" target="_blank" className="text-[#1CB9F6] hover:text-[#1CB9F6]/80 transition-colors">EduNex</a> with ❤️
+              © 2025 AirOra. All rights reserved. | Designed by{" "}
+              <a
+                href="https://edunexservices.in"
+                target="_blank"
+                className="text-[#1CB9F6] hover:text-[#1CB9F6]/80 transition-colors"
+              >
+                EduNex
+              </a>{" "}
+              with ❤️
             </p>
 
             {/* Legal Links */}
@@ -217,7 +225,7 @@ export function Footer() {
         className="fixed bottom-8 right-8 w-12 h-12 bg-[#1CB9F6] rounded-full flex items-center justify-center shadow-lg hover:bg-[#0B1C3F] transition-colors z-50"
         initial={{ opacity: 0, scale: 0 }}
         whileInView={{ opacity: 1, scale: 1 }}
-        viewport={{ once: false, margin: '-500px' }}
+        viewport={{ once: false, margin: "-500px" }}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
         aria-label="Scroll to top"
