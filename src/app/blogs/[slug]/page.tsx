@@ -1,9 +1,9 @@
-import { notFound } from 'next/navigation';
-import Image from 'next/image';
-import Link from 'next/link';
-import { ArrowLeft, Calendar, User, Tag } from 'lucide-react';
-import { blogs } from '@/data/blogs';
-import { Button } from '@/components/ui/button';
+import { notFound } from "next/navigation";
+import Image from "next/image";
+import Link from "next/link";
+import { ArrowLeft, Calendar, User, Tag } from "lucide-react";
+import { blogs } from "@/data/blogs";
+import { Button } from "@/components/ui/button";
 
 interface BlogPostPageProps {
   params: Promise<{
@@ -24,13 +24,14 @@ export async function generateMetadata(props: BlogPostPageProps) {
 
   if (!blog) {
     return {
-      title: 'Guide Not Found',
+      title: "Guide Not Found",
     };
   }
 
   return {
-    title: `${blog.title} | AirOra Insights`,
+    title: `${blog.title.length > 42 ? blog.title.slice(0, 42).trimEnd() + "…" : blog.title} | AirOra`,
     description: blog.excerpt,
+    alternates: { canonical: `/blogs/${blog.slug}` },
   };
 }
 
@@ -47,12 +48,15 @@ export default async function BlogPostPage(props: BlogPostPageProps) {
       {/* Article Header */}
       <div className="container mx-auto max-w-4xl px-6 lg:px-8 mb-12">
         <Link href="/blogs" className="inline-block mb-8">
-          <Button variant="ghost" className="text-gray-500 hover:text-[#1CB9F6] pl-0">
+          <Button
+            variant="ghost"
+            className="text-gray-500 hover:text-[#1CB9F6] pl-0"
+          >
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Articles
           </Button>
         </Link>
-        
+
         <div className="flex flex-wrap items-center gap-4 text-sm text-[#1CB9F6] mb-6 font-medium">
           <span className="bg-[#1CB9F6]/10 px-3 py-1 rounded-full flex items-center gap-1">
             <Tag className="w-3 h-3" />
@@ -73,7 +77,9 @@ export default async function BlogPostPage(props: BlogPostPageProps) {
             <User className="w-5 h-5" />
           </div>
           <div>
-            <div className="text-gray-900 font-medium">Written by {blog.author}</div>
+            <div className="text-gray-900 font-medium">
+              Written by {blog.author}
+            </div>
             <div className="text-gray-500 text-sm">Senior HVAC Engineer</div>
           </div>
         </div>
@@ -95,9 +101,9 @@ export default async function BlogPostPage(props: BlogPostPageProps) {
 
       {/* Article Content */}
       <div className="container mx-auto max-w-4xl px-6 lg:px-8">
-        <div 
+        <div
           className="prose prose-xl max-w-none prose-headings:text-[#0B1C3F] prose-a:text-[#1CB9F6] prose-img:rounded-xl"
-          dangerouslySetInnerHTML={{ __html: blog.content }} 
+          dangerouslySetInnerHTML={{ __html: blog.content }}
         />
       </div>
     </article>

@@ -1,5 +1,13 @@
-import { HeroVideoSection } from '@/components/layout/HeroVideoSection';
-import { ContactForm } from '@/components/sections/ContactForm';
+import type { Metadata } from "next";
+import { HeroVideoSection } from "@/components/layout/HeroVideoSection";
+
+export const metadata: Metadata = {
+  title: "Contact AirOra - Free HVAC Consultation",
+  description:
+    "Reach out to AirOra's HVAC engineering team for project consultations, technical audits, and 24/7 emergency support in Ranchi, Jharkhand.",
+  alternates: { canonical: "/contact" },
+};
+import { ContactForm } from "@/components/sections/ContactForm";
 
 export default function ContactPage() {
   return (

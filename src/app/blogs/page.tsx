@@ -1,12 +1,18 @@
-'use client';
+import type { Metadata } from "next";
+import { HeroVideoSection } from "@/components/layout/HeroVideoSection";
+import { SectionHeader } from "@/components/shared";
+import Link from "next/link";
+import Image from "next/image";
+import { Calendar, User } from "lucide-react";
+import { blogs } from "@/data/blogs";
+import { Card } from "@/components/shared";
 
-import { HeroVideoSection } from '@/components/layout/HeroVideoSection';
-import { SectionHeader, Card } from '@/components/shared';
-import Link from 'next/link';
-import Image from 'next/image';
-import { Calendar, User } from 'lucide-react';
-
-import { blogs } from '@/data/blogs';
+export const metadata: Metadata = {
+  title: "HVAC Insights & Engineering Articles | AirOra",
+  description:
+    "Read expert HVAC guides, industry trends, and technical insights for facility managers and engineers optimizing building climate systems.",
+  alternates: { canonical: "/blogs" },
+};
 
 export default function BlogsPage() {
   return (
@@ -26,8 +32,12 @@ export default function BlogsPage() {
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-{blogs.map((blog, index) => (
-            <Link key={index} href={`/blogs/${blog.slug}`} className="block h-full">
+          {blogs.map((blog, index) => (
+            <Link
+              key={index}
+              href={`/blogs/${blog.slug}`}
+              className="block h-full"
+            >
               <Card
                 variant="hover-lift"
                 className="flex flex-col h-full hover:border-[#1CB9F6]/30 p-0 overflow-hidden"

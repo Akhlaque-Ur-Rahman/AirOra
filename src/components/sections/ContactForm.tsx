@@ -1,45 +1,65 @@
-'use client';
+"use client";
 
-import { motion } from 'motion/react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
+import { useState } from "react";
+import { motion } from "motion/react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from '@/components/ui/select';
-import { SectionHeader, ContactInfo, IconBadge } from '@/components/shared';
-import { MapPin, Phone, Mail, Clock } from 'lucide-react';
-import { CONTACT_INFO } from '@/lib/constants';
+} from "@/components/ui/select";
+import { SectionHeader, IconBadge } from "@/components/shared";
+import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { CONTACT_INFO } from "@/lib/constants";
+
+// WhatsApp number derived from CONTACT_INFO (digits only, with country code)
+const WHATSAPP_NUMBER = CONTACT_INFO.phone.replace(/\D/g, ""); // "918434008450"
 
 export function ContactForm() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [service, setService] = useState("");
+  const [message, setMessage] = useState("");
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    alert("Thank you for your inquiry! We'll get back to you soon.");
+
+    const waMessage =
+      `Hello AirOra Team! \n\n` +
+      `*Name:* ${name}\n` +
+      `*Email:* ${email}\n` +
+      `*Phone:* ${phone || "Not provided"}\n` +
+      `*Service Needed:* ${service || "Not specified"}\n\n` +
+      `*Message:*\n${message}`;
+
+    const encoded = encodeURIComponent(waMessage);
+    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encoded}`, "_blank");
   };
 
   const contactInfoItems = [
     {
       icon: MapPin,
-      title: 'Visit Us',
+      title: "Visit Us",
       details: CONTACT_INFO.address,
     },
     {
       icon: Phone,
-      title: 'Call Us',
+      title: "Call Us",
       details: CONTACT_INFO.phone,
     },
     {
       icon: Mail,
-      title: 'Email Us',
+      title: "Email Us",
       details: CONTACT_INFO.email,
     },
     {
       icon: Clock,
-      title: 'Working Hours',
+      title: "Working Hours",
       details: CONTACT_INFO.hours,
     },
   ];
@@ -89,11 +109,12 @@ export function ContactForm() {
               ))}
             </div>
 
-
             {/* Map Section */}
             <div className="space-y-4">
-              <h4 className="text-xl font-semibold text-[#0B1C3F]">Our Location</h4>
-              
+              <h4 className="text-xl font-semibold text-[#0B1C3F]">
+                Our Location
+              </h4>
+
               <motion.div
                 className="relative w-full h-[350px] md:h-[450px] rounded-2xl shadow-lg overflow-hidden border border-[#1CB9F6]/30"
                 initial={{ opacity: 0, y: 20 }}
@@ -114,14 +135,12 @@ export function ContactForm() {
               </motion.div>
 
               <div className="flex justify-center">
-                <a 
-                  href="https://www.google.com/maps/dir/?api=1&destination=Roshpa+Tower,+Ranchi" 
-                  target="_blank" 
+                <a
+                  href="https://www.google.com/maps/dir/?api=1&destination=Roshpa+Tower,+Ranchi"
+                  target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Button 
-                    className="bg-[#1CB9F6] text-white rounded-xl shadow-md hover:bg-[#1CB9F6]/90"
-                  >
+                  <Button className="bg-[#1CB9F6] text-white rounded-xl shadow-md hover:bg-[#1CB9F6]/90">
                     Get Directions
                   </Button>
                 </a>
@@ -158,6 +177,8 @@ export function ContactForm() {
                   placeholder="Your Name"
                   required
                   className="w-full"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
                 />
               </div>
 
@@ -175,6 +196,8 @@ export function ContactForm() {
                   placeholder="name@example.com"
                   required
                   className="w-full"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
 
@@ -191,6 +214,8 @@ export function ContactForm() {
                   type="tel"
                   placeholder="+91 xxxxxxxxxx"
                   className="w-full"
+                  value={phone}
+                  onChange={(e) => setPhone(e.target.value)}
                 />
               </div>
 
@@ -202,13 +227,17 @@ export function ContactForm() {
                 >
                   Service Needed
                 </label>
-                <Select>
+                <Select value={service} onValueChange={setService}>
                   <SelectTrigger className="w-full">
                     <SelectValue placeholder="Select a service" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="installation">HVAC Installation</SelectItem>
-                    <SelectItem value="maintenance">Maintenance & Repair</SelectItem>
+                    <SelectItem value="installation">
+                      HVAC Installation
+                    </SelectItem>
+                    <SelectItem value="maintenance">
+                      Maintenance & Repair
+                    </SelectItem>
                     <SelectItem value="climate">Climate Control</SelectItem>
                     <SelectItem value="audit">Energy Audit</SelectItem>
                     <SelectItem value="upgrade">System Upgrade</SelectItem>
@@ -231,6 +260,8 @@ export function ContactForm() {
                   rows={5}
                   required
                   className="w-full"
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
                 />
               </div>
 
