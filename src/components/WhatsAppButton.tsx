@@ -12,9 +12,9 @@ export function WhatsAppButton() {
   }
 
   const whatsappLink =
-    "https://wa.me/917091634233?text=Hello%20AirOra%20team%2C%20I%20would%20like%20to%20inquire%20about%20your%20HVAC%20services%20and%20request%20a%20quote.";
+    "https://wa.me/918434008450?text=Hello%20AirOra%20team%2C%20I%20would%20like%20to%20inquire%20about%20your%20HVAC%20services%20and%20request%20a%20quote.";
 
-  return (
+  return ( 
     <motion.a
       href={whatsappLink}
       target="_blank"
